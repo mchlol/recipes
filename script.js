@@ -1,6 +1,19 @@
-let box = document.querySelector('#recipe-box');
+/* 
+click recipe title
+recipe appears in container
+  title
+  image
+  ingredients
+  instructions
+click another recipe title
+content will replace current recipe
+*/
 
-/* when a recipe title is clicked, a BOX below the list of recipes should appear with the RECIPE inside */
+
+const recipeContainer = document.querySelector('#recipe-container');
 
 let recipeTitle = "";
-let recipeContent = "";
+let recipeIngredients = "";
+let recipeInstructions = "";
+
+
