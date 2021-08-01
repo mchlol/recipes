@@ -74,7 +74,7 @@ section {
 #nav-list {
   list-style: none;
   display: flex;
-  flex-direction: row-wrap;
+  flex-direction: row wrap;
   justify-content: space-between;
   margin-right: 10px;
   padding-left: 10px;
@@ -110,6 +110,7 @@ header {
     align-items: center;
 }
 
+/* container for list of recipes */
 #recipe-list {
     display: flex;
     flex-flow: row wrap;
@@ -117,8 +118,9 @@ header {
     align-content: center;
     padding: 10px;
 }
-
-.recipe-name {
+ 
+/* individual recipe */
+.recipe-link {
     margin: 10px;
     padding: 20px;
     width: 100px;
@@ -128,6 +130,7 @@ header {
     text-align: center;
 }
 
+/* the actual recipe itself */
 #recipe-details {
     background-color: white;
     text-align: center;
@@ -136,6 +139,7 @@ header {
     margin: 10px;
 }
 
+/* styles for lists */
 ol li {
     counter-increment: recipe;
 }
