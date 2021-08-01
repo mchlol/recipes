@@ -74,7 +74,7 @@ section {
 #nav-list {
   list-style: none;
   display: flex;
-  flex-direction: row-wrap;
+  flex-direction: row wrap;
   justify-content: space-between;
   margin-right: 10px;
   padding-left: 10px;
@@ -89,7 +89,7 @@ section {
 
 header {
     padding: 25px;
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -102,12 +102,15 @@ header {
 
 #recipes {
     background: linear-gradient(var(--paleBlue), white);
+    height: 100vh;
+    width: auto;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
 
+/* container for list of recipes */
 #recipe-list {
     display: flex;
     flex-flow: row wrap;
@@ -115,11 +118,19 @@ header {
     align-content: center;
     padding: 10px;
 }
-
-.recipe-name {
-    padding: 0px 10px 0px 10px;
+ 
+/* individual recipe */
+.recipe-link {
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--paleBlue);
+    text-align: center;
 }
 
+/* the actual recipe itself */
 #recipe-details {
     background-color: white;
     text-align: center;
@@ -128,6 +139,7 @@ header {
     margin: 10px;
 }
 
+/* styles for lists */
 ol li {
     counter-increment: recipe;
 }
