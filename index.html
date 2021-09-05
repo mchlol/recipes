@@ -1,85 +1,90 @@
 <!DOCTYPE HTML>
 
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <script src="https://kit.fontawesome.com/1aa887c412.js" crossorigin="anonymous"></script>
 
-        <title>Recipes Rewritten</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://kit.fontawesome.com/1aa887c412.js" crossorigin="anonymous"></script>
 
-    <body>
+    <title>Recipes Rewritten</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <!-- NAV -->
-        <nav id="navbar">
-  
-            <li id="logo">
-              <a href="#">mchlol <i class="fas fa-cloud-rain"></i></a>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+
+        <li id="logo">
+            <a href="#">mchlol <i class="fas fa-cloud-rain"></i></a>
+        </li>
+
+        <ul id="nav-list">
+            <li>
+                <a href="#recipes">
+                    Recipes</a>
             </li>
-            
-            <ul id="nav-list">
-                <li>
-                    <a href="#recipes">
-                      Recipes</a>
-                </li>
-                <li>
+            <li>
                 <a href="#about">
-                  About</a>
-                </li>
+                    About</a>
+            </li>
 
-                <li>
+            <li>
                 <a href="#links">
-                  Links</a>
-                </li>
-            </ul>
-              
-        </nav>
+                    Links</a>
+            </li>
+        </ul>
 
-        <!-- HEADER -->
+    </nav>
 
-        <header>
+    <!-- HEADER -->
 
-            <img src="Chef_Flatline.svg" alt="stock illustration of a cheerful chef holding a covered tray">
-      
-            <h1>Recipes Rewritten</h1>
+    <header>
 
-            <p>A selection of recipes rewritten for greater clarity.</p>
+        <img src="Chef_Flatline.svg" alt="stock illustration of a cheerful chef holding a covered tray">
 
-        </header>
-        
-        <section id="recipes">
-            <h1>Recipes</h1>
+        <h1>Recipes Rewritten</h1>
 
-            <div id="recipe-list">
+        <p>A selection of recipes rewritten for greater clarity.</p>
 
-                <div class="recipe-link">
-                    <a href="#chilli">Caribbean Beef Chilli</a>
-                </div>
-                <div class="recipe-link">
-                    <a href="#lentils">Smoky Chicken & Lentils</a>
-                </div>
-                <div class="recipe-link">
-                    <a href="#tomato">Chicken & tomatoes on rice</a>
-                    </div>
-                <div class="recipe-link">
-                    <a href="#curry">Golden Chicken Curry (tba)</a>
-                </div>
+    </header>
+
+    <section id="recipes">
+        <h1>Recipes</h1>
+
+        <div id="recipe-list">
+
+            <div class="recipe-link" id="chilli">
+                Caribbean Beef Chilli
+            </div>
+            <div class="recipe-link" id="lentils">
+                Smoky Chicken & Lentils
+            </div>
+            <div class="recipe-link" id="tomato">
+                Chicken & tomatoes on rice
+            </div>
+            <div class="recipe-link" id="curry">
+                Golden Chicken Curry
+            </div>
+            <!-- tba
                 <div class="recipe-link">
                     <a href="#bolognese">Quick Beef Bolognese (tba)</a>
                 </div>
-                <div class="recipe-link">
-                    <a href="#salmon">Parmesan Crumbed Salmon</a>
-                </div>
-                <div class="recipe-link">
-                    <a href="#sausage">Smoky Sausage Hotpot</a>
-                </div>
+                -->
+            <div class="recipe-link" id="salmon">
+                Parmesan Crumbed Salmon
+            </div>
+            <div class="recipe-link" id="sausage">
+                Smoky Sausage Hotpot
+            </div>
 
-            </div> 
+        </div>
 
-        </section>
+    </section>
 
-            <!-- TEMPLATE
+    <!-- TEMPLATE
             <div id="recipe-details-test">
 
                 <h2>Recipe Title</h2>
@@ -97,240 +102,42 @@
                 <a href="#">Link back</a>
             </div>
             -->
-            
-            <div id="recipe-details">
-                <!-- chilli -->
-                <h2 id="chilli">Caribbean Beef Chilli</h2>
-                        
-                    <!-- NOTE: add coconut rice -->
-
-                <img class="recipe-img" src="assets/caribbean-beef-chilli-coconut-rice.jpeg" alt="caribbean beef chilli">
-                    
-                <p><strong>Prep Time:</strong> 35mins. <strong>Serves:</strong> 2. <strong>Source:</strong> <a href="https://www.hellofresh.com.au/recipes/caribbean-beef-chilli-coconut-rice-596d8638a2882a678d0c6a42" target="_blank">HelloFresh</a></p>
-            
-                <h4>Ingredients</h4>
-                    <ul class="ingredients-list">
-                        <li>1 carrot (unpeeled)</li>
-                        <li>2 cloves of garlic</li>
-                        <li>1 cup of basmati rice</li>
-                        <li>2 cups of water</li>
-                        <li>2 tbsp Jerk seasoning</li>
-                        <li>500g beef mince</li>
-                        <li>50g mango chutney</li>
-                        <li>2 tbsp tomato paste</li>
-                        <li>1 pinch of chilli flakes (optional)</li>
-                        <li>1 cucumber</li>
-                        <li>1 roma tomato</li>
-                        <li>1 bunch of mint</li>
-                        <li>1/2 lemon</li>
-                    </ul>
-
-                <h4>Instructions</h4>                    
-                    <ol class="instructions">
-                        <li>Grate the carrot (unpeeled). Peel and crush the garlic. Slice the lemon into wedges, and juice until you have 2 tsp.</li>
-                        <br>
-                        <li>While the rice is cooking, heat a drizzle of olive oil in a large frying pan over a medium-high heat. Add the beef mince and cook, breaking up with a wooden spoon, for 4-5 minutes, or until browned. Add the carrot, garlic, and jerk spice blend and cook for 1-2 minutes, or until fragrant.</li>
-                        <br>
-                        <li>Add the mango chutney, tomato paste, 1 cup of water, 1 tsp of salt, and the chilli flakes (if using) to the pan with the beef mince. Mix well and simmer for 2 minutes, or until thickened.</li>
-                        <br>
-                        <li>While the chilli is simmering, dice the cucumber and the Roma tomato. Roughly chop the mint leaves. In a medium bowl, combine the cucumber, tomato, mint, lemon juice and a drizzle of olive oil. Season to taste with a pinch of salt and pepper and stir to combine.</li>
-                        <br>
-                        <li>Divide the coconut rice between bowls and top with the Caribbean beef chilli. Spoon over the cucumber-mint salsa.</li>
-                    </ol>
-                    <a href="#recipes"><em>Back to Recipes.</em></a>
 
 
-                    <!-- lentils -->
-                    <h2 id="lentils"> Smoky Chicken & Lentils</h2>
+    </section>
 
-                    <img class="recipe-img" src="assets/smoky-chicken-lentils.jpeg" alt="Smoky chicken & lentils">
+    <section id="recipe-container">
 
-                    <p><strong>Prep Time:</strong> 40mins. <strong>Serves:</strong> 4-5. <strong>Source:</strong> <a href="https://www.lentils.org/recipe/moroccan-braised-chicken-lentils-smoked-paprika-tomato/" target="_blank">Lentils.org</a></p>
+    </section>
 
-                    <h4>Ingredients</h4>
-                    <ul class="ingredients-list">
-                        <li>1 chicken cut into 8 pieces or equivalent in breasts and/or thighs, skin on.</li>
-                        <li>1 medium brown onion, finely chopped</li>
-                        <li>2 cloves of garlic, thinly sliced</li>
-                        <li>1.5 tbsp smoked paprika</li>
-                        <li>1 tbsp cumin</li>
-                        <li>1 cup split red lentils, rinsed</li>
-                        <li>1 cup whole cherry tomatoes</li>
-                        <li>2 cups/500mL chicken stock</li>
-                        <li>3 bay leaves</li>
-                        <li>0.5 tsp chilli flakes</li>
-                        <li>Parsley to garnish, finely chopped</li>
-                    </ul>
+    <section id="about">
+        <h2>Where did these recipes come from?</h2>
+        <p>These are recipes I've found and changed some things to suit my tastes and methods. I like to have the prep
+            such as chopping onions included in the method.<br>
+            For each recipe I have provided a link to the original.</p>
+    </section>
 
-                    <h4>Instructions</h4>                    
-                    <ol class="instructions">
-                        <li>Preheat the oven to 200 celsius. Finely chop the onion. Slice the garlic. Rinse the lentils. Make the chicken stock.</li>
-                        <br>
-                        <li>Pat both sides of chicken with paper towel to remove excess moisture, season generously on both sides with salt and pepper.</li>
-                        <br>
-                        <li>In an ovenproof fry pan or cast iron pan, heat a splash of olive oil over a medium-high heat. Add the chicken to the pan and cook for 4-5 mins each side. Sear the chicken in batches or they will steam and not sear. Remove from the pan and set aside.</li>
-                        <br>
-                        <li>Turn heat to medium, add onions, garlic, 1.5 tbsp smoked paprika, and 1 tbsp cumin. Stir for 3-5 mins. You won't be able to see it but the onions should go translucent but not browned.</li>
-                        <br>
-                        <li>Turn off the heat. Add lentils, stock, tomatoes, bay leaves, chilli flakes, and chicken to the pan.</li>
-                        <br>
-                        <li>Slide the pan into the oven and cook uncovered for 20-25 mins.</li>
-                        <br>
-                        <li>Turn off oven and turn on broiler (grill) for 1-2 mins. This is the brown up the tomatoes. Remove from the oven & serve garnished with chopped parsley.</li>
-                    </ol>
-                    <a href="#recipes"><em>Back to Recipes.</em></a>
+    <section id="links">
+        <h2>Links</h2>
+        <h3>Music for you to cook to?</h3>
+        <a href="https://open.spotify.com/playlist/0limmQuB4aMfsy0x4LqbDA?si=Bx7cXccOSsWO4FrB3oflcg&dl_branch=1">Mchlol's
+            Cookin' Spotify Playlist</a>: a random collection of songs with nice vibes in a mix of genres.</a>
 
-                    <!-- tomato -->
-                    <h2 id="tomato">Chicken & tomato with capers</h2>
+        <h3>Here are some good places to find recipes.</h3>
+        <p>
+        <ul>
+            <li><a href="https://www.taste.com.au" target="_blank">Taste</a></li>
+            <li><a href="https://www.pinterest.com" target="_blank">Pinterest</a></li>
+            <li><a href="https://www.bbcgoodfood.com/" target="_blank">BBC Good Food</a></li>
+        </ul>
+        </p>
+    </section>
 
-                    <img class="recipe-img" src="assets/chicken-tomato-capers.png" alt="Chicken and tomatoes on rice">
+    <footer>
+        <p>&#169 <a href="https://github.com/mchlol">mchlol <i class="fas fa-cloud-rain"></i></a> 2021.</p>
+    </footer>
 
-                    <p><strong>Prep Time:</strong> 30mins. <strong>Serves:</strong> 4. <strong>Source:</strong> <a href="https://diethood.com/chicken-tomato-sauce/" target="_blank">Diethood</a></p>
-
-                    <h4>Ingredients</h4>
-                    <ul class="ingredients-list">
-                        <li>2 tbsp olive oil</li>
-                        <li>4 boneless chicken breasts</li>
-                        <li>1 tsp dried basil</li>
-                        <li>salt and fresh ground pepper to taste</ul>li>
-                        <li>1 tbsp butter</li>
-                        <li>1 brown onion finely diced</li>
-                        <li>2 tsp minced garlic</li>
-                        <li>1/3 cup white wine vinegar</li>
-                        <li>1 400g can of diced tomatoes</li>
-                        <li>2 tbsp tomato paste</li>
-                        <li>1 tsp dried oregano</li>
-                        <li>another 1 tsp dried basil</li>
-                        <li>1/3 cup cream</li>
-                        <li>1/4 cup drained capers</li>
-                        <li>1/4 cup chopped fresh parsley for garnish</li>
-                    </ul>
-
-                    <h4>Instructions</h4>
-                        <ul class="ingredients-list">
-                        <li>Heat olive oil in a large skillet.</li>
-                        <li>Season chicken with dried basil, salt, and pepper.
-                        <li>Add the chicken breasts to the skillet and cook over medium-high heat, 3 to 4 minutes per side, or until lightly browned.</li>
-                        <li>Remove chicken breasts from skillet; set aside.</li>
-                        <li>  Add butter to the skillet and melt.</li>
-                        <li>Add diced onions and cook for 2 minutes.</li>
-                        <li>Stir in garlic and cook for 30 seconds.</li>
-                        <li>Stir in the wine to dissolve the brown pieces found at the bottom of the skillet; continue to cook for 4 minutes, or until reduced.</li>
-                        <li>Mix in the tomatoes, tomato paste, oregano, basil, half & half, and capers.</li>
-                        <li>Place chicken back in the skillet, bring to a boil; cover and simmer over medium-low heat for 8 minutes, or until chicken is cooked through.</li>
-                        <li>Remove from heat, garnish with parsley and serve.</li>
-                    </ul>
-                    <a href="#recipes"><em>Back to Recipes.</em></a>
-
-
-                    <!-- salmon -->
-                    <h2 id="salmon">Parmesan Crusted Salmon</h2>
-
-                    <img class="recipe-img" src="assets/parmesan-crusted-salmon.png" alt="Parmesan Crusted Salmon">
-
-                    <p><strong>Prep Time:</strong> 30mins. <strong>Serves:</strong> 2. <strong>Source:</strong> <a href="https://tasty.co/recipe/parmesan-crusted-salmon" target="_blank">Tasty.co</a></p>
-
-                    <h4>Ingredients</h4>
-                    <ul class="ingredients-list">
-                        <li>4 pieces of salmon, skin off</li>
-                        <li>2 bunches of asparagus</li>
-                        <li>1 egg</li>
-                        <li>1/4 cup panko breadcrumbs</li>
-                        <li>1/4 cup grated parmesan cheese</li>
-                        <li>1 tbsp chopped parsley</li>
-                        <li>salt, pepper, olive oil</li>
-                    </ul>
-
-                    <h4>Instructions</h4>
-                    <ol class="instructions">
-                        <li>Grate the cheese, chop the parsley</li>
-                        <br>
-                        <li>Preheat the oven to 200 celsius</li>
-                        <br>
-                        <li>In a medium bowl, combine the breadcrumbs, parmesan, parsley, and salt to taste.</li>
-                        <br>
-                        <li>In a separate bowl, whisk the egg. Dredge the salmon in the egg, then dip into the breadcrumb mix & cover completely.</li>
-                        <br>
-                        <li>Lay the salmon on a baking sheet. Lay asparagus beside the salmon & drizzle with olive oil and season with salt & pepper.</li>
-                        <br>
-                        <li>Bake for 10-12 minutes.</li>
-                        <br>
-                        <li>Serve.</li>
-                    </ol>
-                    <a href="#recipes"><em>Back to Recipes.</em></a>
-
-                    <!-- sausage hotpot -->
-                    <h2 id="sausage">Smoky Sausage Hotpot</h2>
-
-                    <img class="recipe-img" src="assets/smoky-sasuage-hotpot.jpeg" alt="Smoky Sausage Hotpot"/>
-
-                    <p><strong>Prep Time:</strong> 1hr. <strong>Serves:</strong> 4. <strong>Source:</strong> <a href="https://blog.goodpairdays.com/smoky-sausage-hotpot/" target="_blank">Good Pair Days</a></p>
-
-                    <h4>Ingredients</h4>
-                    <ul class="ingredients-list">
-                        <li>1 tsbp olive oil</li>
-                        <li>1 chopped onion</li>
-                        <li>1 crushed garlic clove</li>
-                        <li>1 chopped celery stalk</li>
-                        <li>2 green or red capsicums, chopped</li>
-                        <li>6 pork sausages, left whole</li>
-                        <li>1 tsp smoked paprika</li>
-                        <li>1/2 tsp ground cumin</li>
-                        <li>1/2 tsp chilli flakes</li>
-                        <li>800g chopped tomatoes</li>
-                        <li>250g spinach leaves</li>
-                        <li>2 tsp breadcrumbs</li>
-                        <li>1 tsp fresh thyme, to serve</li>
-                        <li>Crusty bread, to serve</li>
-                    </ul>
-
-                    <h4>Instructions</h4>
-                    <ol class="instructions">
-                        <li>Chop the onion. Crush the garlic. Chop the celery. Chop the capsicum.</li>
-                        <br>
-                        <li>Heat the oil over a medium heat on the stove in an ovenproof dish. Add the onion and cook for 5 minutes.</li>
-                        <br>
-                        <li>Add the garlic, capsicum, and celery, and cook for another 5 minutes.</li>
-                        <br>
-                        <li>Turn up the heat to high, and add the sausages. Cook for a few minutes to brown all over.</li>
-                        <br>
-                        <li>Stir in the smoked paprika, cumin, and chilli flakes, and salt and pepper.</li>
-                        <br>
-                        <li>Add the tomatoes, bring to a simmer, and cook covered for 40 minutes, stirring regularly.</li>
-                        <br>
-                        <li>Heat up the grill (broiler), and uncover the dish. Stir in the beans and spinach, then scatter over the breadcrumbs.</li>
-                        <br>
-                        <li>Stick it under the grill for 3 minutes, then serve, with thyme and crusty bread.</li>
-                    </ol>
-                    <a href="#recipes"><em>Back to Recipes.</em></a>
-            </div>
-
-        </section>
-
-        <section id="about">
-            <h2>Where did these recipes come from?</h2>
-            <p>These are recipes I've found and changed some things to suit my tastes and methods. I like to have the prep such as chopping onions included in the method.<br>
-                For each recipe I have provided a link to the original.</p> 
-        </section>
-
-        <section id="links">
-            <h2>Links</h2>
-            <!-- ADD A PLAYLIST OR SOMETHING -->
-            <h3>Here are some good places to find recipes.</h3>
-            <p>
-                <ul>
-                    <li><a href="https://www.taste.com.au" target="_blank">Taste</a></li>
-                    <li><a href="https://www.pinterest.com" target="_blank">Pinterest</a></li>
-                    <li><a href="https://www.bbcgoodfood.com/" target="_blank">BBC Good Food</a></li>
-                </ul>
-            </p>
-        </section>
-
-        <footer>
-            <p>&#169 <a href="https://github.com/mchlol">mchlol <i class="fas fa-cloud-rain"></i></a> 2021.</p>
-            </footer>
-
-        <link rel="script" href="script.js">
-    </body>
+    <script src="script.js"></script>
+</body>
 
 </html>
