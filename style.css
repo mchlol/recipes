@@ -102,7 +102,7 @@ header {
 
 #recipes {
     background: linear-gradient(var(--paleBlue), white);
-    height: 100vh;
+    height: 50vh;
     width: auto;
     display: flex;
     flex-flow: column wrap;

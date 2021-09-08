@@ -37,6 +37,7 @@ const sausage = {
     "1/2 tsp chilli flakes",
     "800g chopped tomatoes",
     "250g spinach leaves",
+    "400g can cannellini beans",
     "2 tsp breadcrumbs",
     "1 tsp fresh thyme, to serve",
     "Crusty bread, to serve",
@@ -50,6 +51,43 @@ const sausage = {
     "Add the tomatoes, bring to a simmer, and cook covered for 40 minutes, stirring regularly.",
     "Heat up the grill (broiler), and uncover the dish. Stir in the beans and spinach, then scatter over the breadcrumbs.",
     "Stick it under the grill for 3 minutes, then serve, with thyme and crusty bread.",
+  ],
+};
+
+const curry = {
+  title: "Golden Chicken Curry",
+  image: "./assets/sb-golden-curry.jpeg",
+  prepTime: "30 mins",
+  serves: 4,
+  sourceLink: "https://www.sbfoods-worldwide.com/recipes/010.html",
+  sourceName: "S&B",
+  ingredientsList: [
+"1 cup of long grain rice",
+"2 cups water",
+"1 packet of S&B Golden Curry mix",
+"500g chicken thigh",
+"1 tbsp olive oil",
+"540ml water",
+"1 brown onion",
+"1 carrot",
+"6 baby potatoes",
+"1/2 head of broccoli",
+"You can also use zucchini, or maybe some cup mushrooms, whatever you like really.",
+  ],
+  instructions: [
+"Finely dice the onion, slice the carrot about 5mm thick, chop the potato into 2cm cubes, cut the broccoli into smaller florets.",
+"Get your saucepan lid and wrap it in a teatowel tied at the top, kind of like a furoshiki. (This is to stop condensation from the lid dripping into the rice).",
+"Put 2 cups of water into the saucepan and add 1 cup of rice. Bring to the boil.",
+"Chop the chicken into 2cm cubes. (You can do this earlier but it fills in some time while the rice begins to boil).",
+"Add the oil to a large frypan and cook the chicken for 5 mins.",
+"Is the rice boiling yet? Turn the heat to low and cover with the wrapped lid. Cook for 12 mins with the lid on. Set a timer!",
+"Add the onion, carrot, potatoes, and any other veg you're using and cook for 5 mins",
+"Add 540ml of water, and bring to the boil.",
+"Reduce curry heat to low, cover, and simmer for about 15 mins.",
+"When your 12 mins for the rice is up, take it off the heat, but leave the lid on for 15 mins. (This method gives you perfect fluffy rice, my friend & former-chef Britt taught me this method, including the teatowel thing, it always works).",
+"Turn off the heat for the curry, break the Curry Mix into pieces and scatter across the pan, then stir until they have melted.",
+"Simmer for another 5 mins, stirring constantly.",
+"Once the rice has been off the heat but covered for 15 mins, divide between plates and top with the curry.",
   ],
 };
 
@@ -189,7 +227,6 @@ runs function to append button.id recipe to container
 */
 
 const links = document.querySelectorAll(".recipe-link");
-console.log(links);
 
 links.forEach((link => {
   link.addEventListener('click', () => {
@@ -232,20 +269,34 @@ const recipeContainer = document.querySelector('#recipe-container');
 // CREATE THE FUNCTION
 // the function needs to take in an object (recipe), and display all of the information associated with that object in html.
 
+// create an unordered list.
+// loop over the ingredients array. 
+// create a list item
+// set list item text content to current iteration of array
+// append list item to unordered list
+
 function showRecipe(recipe) {
+  // remove current recipe
+  recipeContainer.innerHTML = "";
   
-  let displayIngredients = document.createElement('ul');
+  let ingredientsUl = document.createElement('ul');
+  ingredientsUl.classList.add("ingredients-list");
+  
   for (let i = 0; i < recipe.ingredientsList.length; i++) {
     let ingredientListItem = document.createElement('li');
-    ingredient = recipe.ingredientsList[i];
-    console.log(ingredient);
-    ingredientListItem.textContent = ingredient;
-    displayIngredients.appendChild(ingredientListItem);
+    ingredientListItem.textContent = recipe.ingredientsList[i]; 
+    ingredientsUl.appendChild(ingredientListItem);
   }
 
   // same for instructions
 
-  let displayInstructions = document.createElement('ol');
+  let instructionsOl = document.createElement('ol');
+  
+  for (let i = 0; i < recipe.instructions.length; i++) {
+    let instructionsListItem = document.createElement('li');
+    instructionsListItem.textContent = recipe.instructions[i]; 
+    instructionsOl.appendChild(instructionsListItem);
+  }
 
   let displayHeadings = `
   <div id="recipe-details">
@@ -253,14 +304,17 @@ function showRecipe(recipe) {
     <img class="recipe-img" src="${recipe.image}" />
     <p>Prep Time: ${recipe.prepTime}. Serves: ${recipe.serves}. Source: <a href="${recipe.sourceLink}" target="_blank">${recipe.sourceName}</a></p>
     <h3>Ingredients</h3>
-    ${displayIngredients}
-    <h3>Instructions</h3>
-    ${displayInstructions}
     `;
+  
+  let instructionsHeading = document.createElement("h3");
+  instructionsHeading.textContent = "Instructions";
 
   const recipeDetails = document.createElement("div");
   recipeDetails.id = "recipe-details";
   recipeDetails.innerHTML = displayHeadings;
+  recipeDetails.appendChild(ingredientsUl);
+  recipeDetails.appendChild(instructionsHeading);
+  recipeDetails.appendChild(instructionsOl);
   recipeContainer.appendChild(recipeDetails);
 
 };
