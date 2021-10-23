@@ -25,6 +25,7 @@ const sausage = {
   serves: 4,
   sourceLink: 'https://blog.goodpairdays.com/smoky-sausage-hotpot/',
   sourceName: "Good Pair Days",
+  tags: ["hearty", "pork"],
   ingredientsList: [
     "1 tsbp olive oil", 
     "1 chopped onion",
@@ -61,6 +62,7 @@ const curry = {
   serves: 4,
   sourceLink: "https://www.sbfoods-worldwide.com/recipes/010.html",
   sourceName: "S&B",
+  tags: ["hearty", "chicken", "japanese", "rice"],
   ingredientsList: [
 "1 cup of long grain rice",
 "2 cups water",
@@ -99,6 +101,7 @@ const chilli = {
   serves: 2,
   sourceLink: "https://www.hellofresh.com.au/recipes/caribbean-beef-chilli-coconut-rice-596d8638a2882a678d0c6a42",
   sourceName: "HelloFresh",
+  tags: ["hearty", "rice", "beef"],
   ingredientsList: [
     "1 carrot (unpeeled)",
     "2 cloves of garlic",
@@ -130,6 +133,7 @@ const lentils = {
   serves: 4,
   sourceLink: "https://www.lentils.org/recipe/moroccan-braised-chicken-lentils-smoked-paprika-tomato/",
   sourceName: "Lentils.org",
+  tags: ["hearty", "chicken", "oven"],
   ingredientsList: [
     "1 chicken cut into 8 pieces or equivalent in breasts and/or thighs, skin on.",
     "1 medium brown onion, finely chopped",
@@ -161,6 +165,7 @@ const tomato = {
   serves: 4,
   sourceLink: "https://diethood.com/chicken-tomato-sauce/",
   sourceName: "Diethood",
+  tags: ["chicken"],
   ingredientsList: [
     "2 tbsp olive oil",
     "4 boneless chicken breasts",
@@ -200,6 +205,7 @@ const salmon = {
   serves: 2,
   sourceLink: "https://tasty.co/recipe/parmesan-crusted-salmon",
   sourceName: "Tasty.co",
+  tags: ["fish", "light", "oven"],
   ingredientsList: [
     "4 pieces of salmon, skin off",
     "2 bunches of asparagus",
@@ -217,6 +223,51 @@ const salmon = {
     "Lay the salmon on a baking sheet. Lay asparagus beside the salmon & drizzle with olive oil and season with salt & pepper.",
     "Bake for 10-12 minutes.",
     "Serve.",
+  ],
+};
+
+const orecchiette = {
+  title: "Miso Carrot Orecchiette",
+  image: "./assets/miso-carrot-orecchiette.jpg",
+  prepTime: "45mins",
+  serves: 4,
+  sourceLink: "https://www.feastingathome.com/orecchiette-with-creamy-carrot-sauce",
+  sourceName: "Feasting at Home",
+  tags: ["vegan", "pasta", "blender"],
+  ingredientsList: [
+    "250g orecchiette pasta",
+    "2 shallots, roughly chopped (or 1/2 an onion",
+    "6 cloves of garlic, roughly chopped",
+    "2 tbsp olive oil",
+    "3 medium carrots, thinly sliced",
+    "2 cups water",
+    "1/4 cup raw cashews",
+    "1/4 tsp salt",
+    "1/4 tsp pepper",
+    "3 tbsp white miso paste",
+    "1/2 flat leaf Italian parsley",
+    "1/2 cup carrot tops (leaves) (or 1/2 more parsley)",
+    "2 garlic cloves",
+    "1 lemon zest only",
+    "1/4 tsp salt",
+    "1/3 cup - 1/2 cup olive oil"
+  ],
+  instructions: [
+    "Finely chop the carrot",
+    "Roughly chop the shallot and garlic",
+    "Boil 6-8 cups of salted water",
+    "Cook the pasta to the packet directions",
+    "Heat 2 tbsp oil in a medium pot over medium heat",
+    "Saute shallot and garlic until golden, about 5 minutes, stirring often",
+    "Add carrot, cashews, 2 cups water, 1/4 tsp salt and 1/4 tsp pepper and bring to a boil",
+    "Cover, turn heat to low and simmer about 15 minutes until carrots are fork-tender",
+    "Make the gremolata: place carrot leaves, parsely, lemon zwst and garlic in a food processor and pulse until finely chopped, add 1/4 tsp salt and 1/3 cup olive oil and pulse until mixed but not smooth",
+    "Back to the sauce: stir in the 3 tbsp miso and let cool for 5-10 minutes",
+    "Prepare the breadcrumbs: place 1/2 cup of panko breadcrumbs in a large skillet over medium heat, drizzle with olive oil, add a pinch of salt and granulated garalic and stir until golden, about 5 minutes",
+    "Once the sauce is cooled place all in a blender and blend on the lowest setting, gradually increasing speed, until fully blended, creamy, and silky smooth - 1-2mins.",
+    "Optional: at the end of the pasta cook time add a cup of peas for extra veggies",
+    "Drain the pasta, pour the sauce - taste it and add salt if needed",
+    "Divide among bowls, sprinkle with the breadcrumbs, and spoon the gremolata over the top."
   ],
 };
 
@@ -256,6 +307,9 @@ links.forEach((link => {
       case "sausage":
         link.style.backgroundColor = "lightBlue";
         showRecipe(sausage);
+        break;
+      case "orecchiette":
+        showRecipe(orecchiette);
         break;
       default:
         link.style.backgroundColor = "grey";
@@ -309,7 +363,7 @@ function showRecipe(recipe) {
   let instructionsHeading = document.createElement("h3");
   instructionsHeading.textContent = "Instructions";
 
-  const recipeDetails = document.createElement("div");
+  const recipeDetails = document.createElement("div"); // this doubles up on the div that's already been created in displayHeadings
   recipeDetails.id = "recipe-details";
   recipeDetails.innerHTML = displayHeadings;
   recipeDetails.appendChild(ingredientsUl);
