@@ -170,7 +170,8 @@ ol {
 }
 
 .recipe-img {
-    width: 50vw;
+    max-height: 400px;
+    width: auto;
     height: auto;
     border: none;
     border-radius: 50px;
