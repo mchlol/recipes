@@ -320,5 +320,57 @@ links.forEach((link => {
 // select the section to hold recipe divs
 const recipeContainer = document.querySelector('#recipe-container');
 
+// CREATE THE FUNCTION
+// the function needs to take in an object (recipe), and display all of the information associated with that object in html.
+
+// create an unordered list.
+// loop over the ingredients array. 
+// create a list item
+// set list item text content to current iteration of array
+// append list item to unordered list
+
+function showRecipe(recipe) {
+  // remove current recipe
+  recipeContainer.innerHTML = "";
+  
+  let ingredientsUl = document.createElement('ul');
+  ingredientsUl.classList.add("ingredients-list");
+  
+  for (let i = 0; i < recipe.ingredientsList.length; i++) {
+    let ingredientListItem = document.createElement('li');
+    ingredientListItem.textContent = recipe.ingredientsList[i]; 
+    ingredientsUl.appendChild(ingredientListItem);
+  }
+
+  // same for instructions
+
+  let instructionsOl = document.createElement('ol');
+  
+  for (let i = 0; i < recipe.instructions.length; i++) {
+    let instructionsListItem = document.createElement('li');
+    instructionsListItem.textContent = recipe.instructions[i]; 
+    instructionsOl.appendChild(instructionsListItem);
+  }
+
+  let displayHeadings = `
+  <div id="recipe-details">
+    <h2>${recipe.title}</h2>
+    <img class="recipe-img" src="${recipe.image}" />
+    <p>Prep Time: ${recipe.prepTime}. Serves: ${recipe.serves}. Source: <a href="${recipe.sourceLink}" target="_blank">${recipe.sourceName}</a></p>
+    <h3>Ingredients</h3>
+    `;
+  
+  let instructionsHeading = document.createElement("h3");
+  instructionsHeading.textContent = "Instructions";
+
+  const recipeDetails = document.createElement("div"); // this doubles up on the div that's already been created in displayHeadings
+  recipeDetails.id = "recipe-details";
+  recipeDetails.innerHTML = displayHeadings;
+  recipeDetails.appendChild(ingredientsUl);
+  recipeDetails.appendChild(instructionsHeading);
+  recipeDetails.appendChild(instructionsOl);
+  recipeContainer.appendChild(recipeDetails);
+
+};
 
 // need to be able to replace the currently showing recipe with the next one selected
