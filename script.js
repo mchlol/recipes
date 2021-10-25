@@ -309,6 +309,7 @@ links.forEach((link => {
         showRecipe(sausage);
         break;
       case "orecchiette":
+        link.style.backgroundColor = "#ff9981ff"
         showRecipe(orecchiette);
         break;
       default:

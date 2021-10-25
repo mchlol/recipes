@@ -6,7 +6,13 @@ A small collection of recipes rewritten in a way that makes it easier for me to 
 
 ## About this project
 
-I built this to practice some design along with what I learned in the beginning of the Odin Project and FreeCodeCamp. It has a similar structure to the portfolio project - nav bar, sections, footer. Nothing fancy. Actually it looks a bit shit. Designer I am not. My next challenge is going to be to overhaul the design, get rid of the clutter, and make it make more sense in the context of a recipe viewer (not a recipe site - this will only ever be one page).  
+This is just a little single page project for me to practice a little HTML, CSS, and DOM manipulation with JavaScript.  
+I hate it when a recipe is like 'this only takes 10 mins of prep!' and then it takes you double that because they list all the ingredients as if they are already rinsed, chopped, etc. So I have rewritten them and popped it up here on github so I can access it from my phone when in the kitchen. Ironically it looks terrible on mobile so I better tackle that in the redesign!    
+   
+
+I used [counter](https://css-tricks.com/almanac/properties/c/counter-set/) to style the list markers. It's not bad for a first go, but there's another cool idea that [looks like a timeline](https://css-tricks.com/custom-list-number-styling/) I might try for the instructions.  
   
 
-New recipes will be added whenever I feel like it. Right now I like the Sausage Hotpot a lot.
+New recipes will be added whenever I feel like it. Right now I like the Sausage Hotpot a lot.  
+
+ 
