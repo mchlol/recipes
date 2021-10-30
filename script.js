@@ -2,11 +2,12 @@
 /*
 const recipe = {
   title: "",
-  image: ),
+  image: "",
   prepTime: "",
   serves: 4,
-  sourceLink: ""),
+  sourceLink: "",
   sourceName: "",
+  tags: [""],
   ingredientsList: [
 
   ],
@@ -272,6 +273,37 @@ const orecchiette = {
   ],
 };
 
+const sausageRisoni = {
+  title: "Italian Sausage Soup with Risoni",
+  image: "./assets/italian-sausage-risoni.jpg",
+  prepTime: "30mins",
+  serves: 4,
+  sourceLink: "https://thekitchengirl.com/whole-wheat-orzo-sausage-soup/",
+  sourceName: "The Kitchen Girl",
+  tags: ["risoni", "pork", "soup"],
+  ingredientsList: [
+    "1 tbsp olive oil",
+    "250g italian sausage",
+    "1/2 brown onion",
+    "3 cloves garlic",
+    "2 stalks celery",
+    "1/2 cup uncooked risoni",
+    "6 cups chicken broth",
+    "400g can diced tomato",
+    "1 tsp italian herbs",
+    "1 tsp salt",
+    "1/2 tsp black pepper",
+  ],
+  instructions: [
+    "Cook sausage in a 4 quart soup pot on medium-high (add a splash of olive oil, if needed). Transfer sausage out of pot and set aside.",
+    "Continue on medium-high heat. Add OLIVE OIL (if needed).",
+    "Add ONION, GARLIC, and CELERY. Sauté until tender, stirring as needed.",
+    "Add SAUSAGE back to pot along with uncooked ORZO.",
+    "Add CHICKEN BROTH, DICED TOMATOES (with juice), ITALIAN SEASONING, SALT, and PEPPER.",
+    "Bring soup just to boil; then reduce heat to medium-low and simmer until orzo is cooked through (10-15 min).",
+    "Serve warm, garnished with croutons or sliced French bread",
+  ],
+};
 
 /*
 recipe divs add event listener 'click'
@@ -312,6 +344,10 @@ links.forEach((link => {
       case "orecchiette":
         link.style.backgroundColor = "#ff9981ff"
         showRecipe(orecchiette);
+        break;
+      case "sausage-risoni":
+        link.style.backgroundColor = "#ff9981"
+        showRecipe(sausageRisoni);
         break;
       default:
         link.style.backgroundColor = "grey";

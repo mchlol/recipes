@@ -108,6 +108,17 @@ header {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    border: 1px solid blue;
+}
+
+.left h2 {
+    color: magenta;
+}
+
+.left {
+    height: 50vh;
+    border: 1px solid magenta;
+    background: var(--paleBlue);
 }
 
 /* container for list of recipes */
@@ -117,17 +128,17 @@ header {
     justify-content: space-evenly;
     align-content: center;
     padding: 10px;
+    border: 1px solid red;
 }
  
 /* individual recipe */
 .recipe-link {
     margin: 10px;
-    padding: 20px;
-    width: 100px;
-    height: auto;
+    padding: 10px;
     border-radius: 10px;
-    background-color: var(--paleBlue);
+    background-color: var(--yellow);
     text-align: center;
+    border: 1px solid black;
 }
 
 /* the actual recipe itself */
@@ -139,7 +150,7 @@ header {
     margin: 10px;
 }
 #recipe-container {
-    border: 1px solid black;
+    border: 1px solid orange;
 }
 
 /* styles for lists */
@@ -170,9 +181,8 @@ ol {
 }
 
 .recipe-img {
-    max-height: 400px;
-    width: auto;
-    height: auto;
+    max-height: 300px;
+    max-width: 300px;
     border: none;
     border-radius: 50px;
 }
