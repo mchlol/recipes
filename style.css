@@ -180,11 +180,12 @@ ol {
     color:var(--green);
 }
 
-.recipe-img {
-    max-height: 300px;
-    max-width: 300px;
+.recipe-img-container {
+    height: 300px;
+    width: 300px;
     border: none;
     border-radius: 50px;
+    object-fit: contain;
 }
 
 /* footer */

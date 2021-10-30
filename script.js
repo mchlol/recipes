@@ -358,29 +358,25 @@ links.forEach((link => {
 // select the section to hold recipe divs
 const recipeContainer = document.querySelector('#recipe-container');
 
-// CREATE THE FUNCTION
-// the function needs to take in an object (recipe), and display all of the information associated with that object in html.
-
-// create an unordered list.
-// loop over the ingredients array. 
-// create a list item
-// set list item text content to current iteration of array
-// append list item to unordered list
 
 function showRecipe(recipe) {
   // remove current recipe
   recipeContainer.innerHTML = "";
   
+  // create unordered list for ingredients
   let ingredientsUl = document.createElement('ul');
+  // include the class
   ingredientsUl.classList.add("ingredients-list");
   
+  // loop through the recipe object's ingredients array
   for (let i = 0; i < recipe.ingredientsList.length; i++) {
+    // create a list item & input the current ingredient
     let ingredientListItem = document.createElement('li');
     ingredientListItem.textContent = recipe.ingredientsList[i]; 
+    // append the list item to the list
     ingredientsUl.appendChild(ingredientListItem);
   }
 
-  // same for instructions
 
   let instructionsOl = document.createElement('ol');
   
@@ -390,20 +386,21 @@ function showRecipe(recipe) {
     instructionsOl.appendChild(instructionsListItem);
   }
 
-  let displayHeadings = `
-  <div id="recipe-details">
-    <h2>${recipe.title}</h2>
-    <img class="recipe-img" src="${recipe.image}" />
-    <p>Prep Time: ${recipe.prepTime}. Serves: ${recipe.serves}. Source: <a href="${recipe.sourceLink}" target="_blank">${recipe.sourceName}</a></p>
+  // create the recipe header - title, image, info
+  let recipeHeading = `<h2>${recipe.title}</h2>`;
+  let recipeImage = `<div class="recipe-img-container">
+  <img class="recipe-img" src="${recipe.image}"/>
+  </div>`;
+  let recipeInfo = `<p>Prep Time: ${recipe.prepTime}. Serves: ${recipe.serves}. Source: <a href="${recipe.sourceLink}" target="_blank">${recipe.sourceName}</a></p>
     <h3>Ingredients</h3>
     `;
   
   let instructionsHeading = document.createElement("h3");
   instructionsHeading.textContent = "Instructions";
 
-  const recipeDetails = document.createElement("div"); // this doubles up on the div that's already been created in displayHeadings
+  const recipeDetails = document.createElement("div"); 
   recipeDetails.id = "recipe-details";
-  recipeDetails.innerHTML = displayHeadings;
+  recipeDetails.innerHTML = recipeHeading + recipeImage + recipeInfo;
   recipeDetails.appendChild(ingredientsUl);
   recipeDetails.appendChild(instructionsHeading);
   recipeDetails.appendChild(instructionsOl);
